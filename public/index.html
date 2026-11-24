@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f2e6c9">
+  <meta name="description" content="HOTEL 96 - بازی آنلاین هتل ۹۶ نفره با فضای پارک و خانه سه‌بعدی">
+  <title>HOTEL 96 v5.2 | هتل ۹۶</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand-mark">H<span>96</span></div>
+    <div class="brand-copy">
+      <strong>HOTEL 96</strong>
+      <small>هتلِ طبقه‌های عجیب</small>
+    </div>
+    <div class="online-pill"><span class="live-dot"></span><b id="onlineCount">۰</b><small> / ۹۶ آنلاین</small><span id="serverStatus" class="server-status">در حال اتصال…</span></div>
+  </header>
+
+  <main>
+    <section id="joinScreen" class="join-screen">
+      <div class="intro-card">
+        <div class="hotel-stamp">OPEN<br>24 FLOORS</div>
+        <p class="eyebrow">یک هتل، ۲۴ طبقه، ۹۶ نفر</p>
+        <h1>طبقه‌ات را<br><em>انتخاب کن!</em></h1>
+        <p class="intro-text">هر طبقه فقط چهار خانه دارد. انتخابت را انجام بده؛ شاید هم‌طبقه‌ای‌هایت را بعداً بشناسی!</p>
+        <div class="doodle-building" aria-hidden="true">
+          <div class="doodle-roof"></div>
+          <div class="doodle-floors">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="doodle-door">H</div>
+        </div>
+      </div>
+      <form id="joinForm" class="join-form">
+        <label for="playerName">نام کاربری</label>
+        <input id="playerName" name="name" maxlength="18" minlength="2" placeholder="مثلاً آراد" autocomplete="username" required>
+        <label for="accountPassword">رمز حساب (حداقل ۸ نویسه)</label>
+        <input id="accountPassword" type="password" minlength="8" maxlength="128" autocomplete="current-password" placeholder="رمز حساب را وارد کن" required>
+        <label for="floorChoice">انتخاب مخفی طبقه (۱ تا ۲۴)</label>
+        <select id="floorChoice" name="floor" required></select>
+        <div id="adminCodeRow" hidden>
+          <label for="adminCode">رمز دسترسی ادمین AmirXrax</label>
+          <input id="adminCode" type="password" autocomplete="off" placeholder="رمز ادمین که در Render تنظیم می‌کنی">
+        </div>
+        <p class="form-hint">ظرفیت هر طبقه ۴ نفر است. جایگاهت پس از خروج تا ۲۴ ساعت رزرو می‌ماند؛ بعد از آن، حساب و وسایلت حفظ می‌شوند اما برای ورود دوباره باید طبقه انتخاب کنی.</p>
+        <button class="primary-btn" type="submit">ساخت حساب و ورود <span>←</span></button>
+        <button id="accountLoginButton" class="secondary-account-btn" type="button">ورود به حساب قبلی</button>
+        <button id="accountRecoverButton" class="secondary-account-btn" type="button">فراموشی رمز / بازیابی حساب</button>
+        <button id="resumeOldButton" class="resume-old-btn" type="button" hidden>↩️ بازگشت به شخصیت رزروشده قبلی</button>
+        <div id="joinError" class="error-message" role="alert" hidden></div>
+      </form>
+      <div class="rules-strip"><span>↕</span> رفت‌وآمد تا طبقه شروع <span>✦</span> ۴ خانه در هر طبقه <span>✦</span> رزرو ۲۴ ساعته</div>
+    </section>
+
+    <section id="gameScreen" class="game-screen" hidden>
+      <div class="player-panel">
+        <div class="player-avatar" id="myAvatar">؟</div>
+        <div class="player-details">
+          <strong id="myName">بازیکن</strong>
+          <small>خانه من: <b id="myFloor">—</b></small>
+          <small id="myRole" class="role-chip">ساکن</small>
+        </div>
+        <div class="key-status" id="keyStatus"><span>🔒</span><small>کلید نداری</small></div>
+        <div class="survival-stats"><div>❤️ <b id="healthValue">۱۰۰</b><div class="stat-track"><i id="healthBar"></i></div></div><div>🍖 <b id="hungerValue">۱۰۰</b><div class="stat-track hunger"><i id="hungerBar"></i></div></div><div>🪙 <b id="coinValue">۱۰۰</b></div></div>
+      </div>
+      <section class="survival-tools">
+        <button id="inventoryButton" type="button">🎒 کیف وسایل</button>
+        <button id="nameMarketButton" type="button">🏷️ بازار نام‌ها</button>
+        <button id="secureAccountButton" type="button" hidden>🔐 امنیت حساب</button>
+        <button id="logoutButton" type="button">🚪 خروج از حساب</button>
+        <button id="phoneButton" type="button" disabled>📱 گوشی</button>
+        <button id="chatToggleButton" type="button">💬 چت طبقه</button>
+        <button id="voiceToggleButton" type="button">🎙️ ویس‌چت خاموش</button>
+        <button id="parkButton" type="button">🌳 رفتن به پارک</button>
+        <select id="attackTarget" aria-label="انتخاب بازیکن برای حمله"></select>
+        <button id="attackButton" type="button">👊 حمله</button>
+        <button id="guardButton" type="button" hidden>🛡️ درخواست گارد</button>
+        <button id="escapeButton" type="button" hidden>🌙 خروج مخفیانه</button>
+        <span id="equippedLabel">لباس: عادی</span>
+      </section>
+      <section id="chatPanel" class="chat-panel" hidden>
+        <div class="chat-head"><div><strong>💬 گفت‌وگوی طبقه</strong><small id="chatFloorLabel">پیام‌ها فقط برای هم‌طبقه‌ای‌هاست.</small></div><button id="chatCloseButton" type="button" aria-label="بستن چت">×</button></div>
+        <div id="chatMessages" class="chat-messages" aria-live="polite"><p class="chat-empty">هنوز پیامی نیست. اولین پیام را بفرست!</p></div>
+        <form id="chatForm" class="chat-form"><input id="chatInput" maxlength="180" autocomplete="off" placeholder="پیامت را بنویس…"><button type="submit">ارسال</button></form>
+      </section>
+      <section id="adminPanel" class="admin-panel" hidden>
+        <strong>🛠️ پنل ادمین AmirXrax</strong>
+        <div class="admin-controls"><select id="adminTarget" aria-label="انتخاب بازیکن"></select><button id="adminKickButton" type="button">خارج کردن</button><button id="adminBanButton" type="button">⛔ بن دائمی</button></div>
+        <div class="admin-actions">
+          <button id="adminFillHungerButton" type="button">🍖 پر کردن غذا</button>
+          <button id="adminFillHealthButton" type="button">❤️ پر کردن جون</button>
+          <button id="adminFloor24Button" type="button">🔓 قفل ۲۴ طبقه: باز</button>
+        </div>
+        <small id="adminFloorStatus" class="admin-floor-status">دسترسی ۲۴ طبقه در شروع بازی روشن است.</small>
+      </section>
+
+      <div class="game-toolbar">
+        <div><span class="mini-label">نمای برش ساختمان</span><strong>هتل ۲۴ طبقه</strong></div>
+        <button id="rulesButton" class="quiet-btn" type="button">قوانین؟</button>
+      </div>
+      <div id="rulesPanel" class="rules-panel" hidden>
+        <b>قوانین هتل</b>
+        <p>ساکن‌ها تا طبقه شروع خودشان بالا می‌روند؛ در بالاترین طبقه می‌توانند درخواست گارد بدهند و تا طبقه ۲۴ بروند. برای خروج مخفیانه باید در طبقه ۱ باشی و گارد ممکن است جلویت را بگیرد. هر فروشگاه فقط با حضور یک کارمند آنلاین باز می‌شود.</p>
+      </div>
+
+      <div class="building-wrap">
+        <div class="building-top"><span>پشت‌بام • طبقه ۲۴</span><span>نمای برش هتل</span></div>
+        <div class="building" id="building" aria-label="ساختمان هتل از طبقه ۲۴ تا منفی ۳"></div>
+        <div class="building-bottom"><span>زیرزمین مخفی</span><span>✦</span><span>طبقه منفی ۳</span></div>
+      </div>
+      <div class="bottom-hint" id="bottomHint">برای رفتن به یک طبقه پایین‌تر، دکمه آسانسور همان ردیف را بزن.</div>
+
+      <section class="house-panel" id="housePanel">
+        <div class="house-panel-heading"><span>🏠</span><div><strong>خانه و بازی دونفره</strong><small>یکی از بازیکن‌های آنلاین طبقه‌ات را دعوت کن.</small></div></div>
+        <div class="house-invite-row">
+          <select id="housePartnerSelect" aria-label="انتخاب هم‌طبقه‌ای"></select>
+          <button class="house-invite-btn" id="invitePartnerBtn" type="button">دعوت به خانه</button>
+        </div>
+        <p id="houseStatus" class="house-status">برای بازی دونفره، هم‌طبقه‌ای‌ات را دعوت کن.</p>
+      </section>
+
+      <section class="house-room-panel" id="houseRoomPanel" hidden>
+        <div class="house-room-head"><div><small>خانهٔ مشترک</small><h2>🎮 وقت مینی‌گیمه!</h2></div><button class="leave-house-btn" id="leaveHouseBtn" type="button">خروج از خانه</button></div>
+        <p id="housePlayersLine" class="house-players-line"></p>
+        <div class="house-3d-wrap"><canvas id="house3dCanvas" width="960" height="460" aria-label="نمای سه‌بعدی خانه مشترک"></canvas></div>
+        <div id="houseCabinetBar" class="house-cabinet-bar"></div>
+        <div class="mini-game-grid" id="miniGameChoices"></div>
+        <div class="mini-game-stage" id="miniGameStage" hidden>
+          <div class="mini-game-stage-head"><strong id="miniGameTitle"></strong><span id="miniGameTimer">۴۵ ثانیه</span></div>
+          <p id="miniGameDescription"></p>
+          <div id="miniGameScores" class="mini-game-scores"></div>
+          <div id="miniGameQuestion" class="mini-game-question" hidden></div>
+          <button id="miniGameAction" class="mini-game-action" type="button"></button>
+          <button id="miniGameAgain" class="mini-game-again" type="button" hidden>دوباره بازی کن</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="shopModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="shopModal">×</button><h2 id="shopTitle">فروشگاه</h2><p id="shopLoading">در حال ورود به فروشگاه…</p><p id="shopWorkerStatus" class="shop-worker-status"></p><div id="shopJobActions" class="shop-job-actions"></div><div id="shopItems"></div></section></div>
+  <div id="inventoryModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="inventoryModal">×</button><h2>🎒 اینونتوری</h2><div id="inventoryItems"></div></section></div>
+  <div id="phoneModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="phoneModal">×</button><h2>📱 گوشی من</h2><p id="phoneStatusText">گوشی فعال است.</p><div class="phone-app-grid"><button id="phoneOpenChat" type="button">💬 پیام‌های طبقه</button><button id="phoneRefreshContacts" type="button">👥 مخاطبین آنلاین</button></div><div id="phoneContacts" class="phone-contacts">برای دیدن مخاطبین، دکمه را بزن.</div></section></div>
+  <div id="nameMarketModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="nameMarketModal">×</button><h2>🏷️ بازار نام‌ها</h2><p>برای صاحب نام پیشنهاد سکه بفرست. سکه تا پاسخ او از موجودی تو کنار گذاشته می‌شود.</p><div id="nameMarketItems"></div></section></div>
+  <div id="nameOffersModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="nameOffersModal">×</button><h2>📨 پیشنهادهای خرید نام</h2><div id="nameOffersItems"></div></section></div>
+  <div id="recoveryModal" class="game-modal" hidden><section class="game-modal-card"><button class="modal-x" data-close="recoveryModal">×</button><h2 id="recoveryTitle">بازیابی حساب</h2><div id="recoveryFormArea"><label for="recoveryName">نام کاربری</label><input id="recoveryName" autocomplete="username" placeholder="نام حساب"><label for="recoveryCodeInput">کد بازیابی</label><input id="recoveryCodeInput" autocomplete="off" placeholder="XXXX-XXXX-XXXX"><label for="recoveryNewPassword">رمز جدید</label><input id="recoveryNewPassword" type="password" minlength="8" autocomplete="new-password" placeholder="حداقل ۸ نویسه"><button id="recoverySubmitButton" class="primary-btn" type="button">ثبت رمز جدید</button></div><div id="recoveryCodeResult" hidden><p>کد بازیابی جدیدت را یادداشت کن و در جای امن نگه دار:</p><strong id="recoveryCodeDisplay" class="recovery-code-display"></strong><p>این کد فقط همین بار نمایش داده می‌شود.</p><button id="recoveryDoneButton" class="primary-btn" type="button">کد را نگه داشتم</button></div></section></div>
+  <div id="parkModal" class="game-modal" hidden>
+    <section class="park-modal-card">
+      <div class="park-modal-head"><div><small>HOTEL 96 • بیرون هتل</small><h2>🌳 پارک مرکزی</h2><p>با WASD یا کلیدهای جهت حرکت کن؛ بازیکن‌های دیگر را هم در پارک می‌بینی.</p></div><button id="parkCloseButton" class="modal-x" type="button">×</button></div>
+      <canvas id="parkCanvas" width="1000" height="620" aria-label="پارک ایزومتریک سه‌بعدی"></canvas>
+      <div class="park-controls"><button data-park-move="up" type="button">▲</button><div><button data-park-move="left" type="button">◀</button><button data-park-move="down" type="button">▼</button><button data-park-move="right" type="button">▶</button></div><small>W A S D / ↑ ↓ ← →</small></div>
+    </section>
+  </div>
+  <div id="houseInviteModal" class="house-invite-modal" hidden>
+    <div class="house-invite-card">
+      <div class="house-invite-icon">🏠</div>
+      <h2>دعوت به خانه!</h2>
+      <p id="houseInviteText">یک بازیکن تو را دعوت کرده است.</p>
+      <div class="house-invite-actions"><button id="acceptHouseInvite" type="button">قبول دعوت</button><button id="declineHouseInvite" type="button">رد دعوت</button></div>
+    </div>
+  </div>
+  <dialog id="rulesDialog" class="rules-dialog">
+    <button class="dialog-close" id="closeRules" type="button" aria-label="بستن">×</button>
+    <h2>دفترچه راهنمای هتل</h2>
+    <p>هر طبقه از ۱ تا ۲۴ چهار خانه و یک مغازه تصادفی دارد. می‌توانی بالا و پایین بروی، اما بالاتر از طبقه‌ای که اول انتخاب کردی نمی‌توانی بروی. در طبقات منفی زامبی حضور دارد و می‌توانی با دکمهٔ فرار به آسانسور برگردی.</p>
+    <p>وقتی به طبقه ۱ رسیدی، روی «برداشتن کلید» بزن. بعد می‌توانی درِ طبقه صفر را باز کنی و به طبقه‌های منفی ۱ تا منفی ۳ بروی. در زیرزمین، جاذبه برعکس است و آدم‌ها روی سقف راه می‌روند!</p>
+    <p>بازیکنان آفلاین تا ۲۴ ساعت جایگاه رزروشده دارند؛ بعد از آن خانه آزاد می‌شود. اگر با همان مرورگر برگردی، شخصیتت به همان طبقه برمی‌گردد. برای بازی دونفره، هم‌طبقه‌ای آنلاین را دعوت کن؛ پس از قبول دعوت، هر دو وارد خانهٔ مشترک می‌شوید و می‌توانید یکی از ۷ مینی‌گیم را انتخاب کنید.</p>
+  </dialog>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/game.js"></script>
+</body>
+</html>

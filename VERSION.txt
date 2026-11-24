@@ -1,0 +1,3 @@
+HOTEL 96
+Version: 5.2.0
+Features: V5.1 account login/recovery, name marketplace and gameplay; admin food/health refills, permanent bans and global 24-floor access toggle (enabled by default); workshop task jobs; staffed bank with fictional in-game crypto trading; guaranteed park/workshop/bank venues; isometric 3D-style park with synchronized player movement; shared 3D-style home (up to 4 players; remaining members stay when one leaves) with cabinet games placed on the table; WebRTC voice chat for same-floor players / shared-home groups (HTTPS and microphone permission required; some networks may require TURN). Park and home use an isometric Canvas 3D-style view, not a full WebGL 3D engine.

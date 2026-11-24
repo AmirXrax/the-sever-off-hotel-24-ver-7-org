@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--ink:#282820;--muted:#77715f;--paper:#f2e6c9;--paper2:#fbf4e3;--line:#b9a985;--red:#b94f3b;--green:#416e55;--blue:#557b88;--shadow:rgba(57,43,23,.14)}
+*{box-sizing:border-box}html{min-height:100%;background:#dfd1ad}body{margin:0;min-height:100vh;color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;background:radial-gradient(ellipse at 10% 0%,#f7edda 0,#eadcbb 55%,#d9c9a3 100%);overflow-x:hidden}.paper-grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}.topbar{height:68px;display:flex;align-items:center;gap:11px;padding:0 17px;border-bottom:2px solid rgba(106,88,57,.24);background:rgba(250,243,226,.82);position:relative;z-index:2}.brand-mark{width:43px;height:43px;border:2px solid var(--ink);border-radius:12px 4px 12px 4px;display:grid;place-items:center;font-weight:900;font-size:17px;transform:rotate(-4deg);background:#e6c78e}.brand-mark span{font-size:11px;margin-right:1px}.brand-copy{display:flex;flex-direction:column;line-height:1.25}.brand-copy strong{font-size:15px;letter-spacing:1.7px}.brand-copy small{font-size:10px;color:var(--muted)}.online-pill{margin-right:auto;border:1px solid #bcae8e;border-radius:30px;padding:6px 10px;background:#f9f1df;display:flex;align-items:center;gap:5px;font-size:12px}.online-pill small{font-size:10px;color:var(--muted)}.live-dot{width:7px;height:7px;border-radius:50%;background:#579267;box-shadow:0 0 0 3px #57926724}
+main{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:22px 14px 50px}.join-screen{max-width:570px;margin:15px auto}.intro-card{position:relative;overflow:hidden;min-height:276px;padding:27px 27px 20px;border:2px solid #544b3b;border-radius:8px 18px 8px 18px;background:linear-gradient(135deg,#f8efd9,#ead8b2);box-shadow:6px 7px 0 rgba(72,57,34,.13)}.eyebrow,.mini-label{font-size:11px;letter-spacing:.3px;color:var(--red);font-weight:800}.intro-card h1{font-size:43px;line-height:1.15;margin:9px 0 10px;font-weight:900;position:relative;z-index:1}.intro-card h1 em{font-style:normal;color:var(--red);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px}.intro-text{max-width:270px;color:#655d4d;font-size:13px;line-height:1.9;position:relative;z-index:1}.hotel-stamp{position:absolute;left:21px;top:24px;border:2px dashed #9f573f;color:#9f573f;padding:8px 10px;font-size:10px;font-weight:900;text-align:center;line-height:1.3;transform:rotate(-9deg);opacity:.84}.doodle-building{position:absolute;left:29px;bottom:0;width:138px;height:164px;border:3px solid #625741;border-bottom:0;border-radius:5px 5px 0 0;background:#ddc99e;transform:skewY(-2deg);box-shadow:inset 0 0 0 5px #ead9b5}.doodle-roof{position:absolute;top:-11px;left:-8px;right:-8px;height:12px;background:#a85a43;border:2px solid #625741;border-radius:4px}.doodle-floors{height:100%;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:7px;padding:12px 11px 10px}.doodle-floors i{border:2px solid #796a4b;background:#f4e9cb;border-radius:3px 3px 0 0;position:relative}.doodle-floors i:after{content:'';position:absolute;bottom:0;left:35%;width:30%;height:55%;background:#b8a078}.doodle-door{position:absolute;bottom:0;left:50%;transform:translateX(-50%);border:2px solid #625741;border-bottom:0;width:27px;height:37px;background:#9a7652;display:grid;place-items:center;color:#f7edda;font-weight:900}.join-form{margin-top:22px;padding:23px;border:1.5px solid #b9a985;border-radius:8px;background:rgba(251,246,232,.9);box-shadow:0 5px 15px var(--shadow);display:flex;flex-direction:column;gap:9px}.join-form label{font-size:12px;font-weight:800;margin-top:2px}.join-form input,.join-form select{width:100%;height:47px;border:1.5px solid #b6a783;border-radius:7px;background:#fff9ea;padding:0 13px;font:inherit;color:var(--ink);outline:none}.join-form input:focus,.join-form select:focus{border-color:var(--green);box-shadow:0 0 0 3px #416e5520}.form-hint{font-size:10px;color:var(--muted);line-height:1.7;margin:0 0 6px}.primary-btn{height:49px;border:0;border-radius:7px;background:var(--green);color:white;font:800 14px 'Vazirmatn',sans-serif;box-shadow:0 4px 0 #294c39;cursor:pointer}.primary-btn span{font-size:20px;margin-right:8px}.primary-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #294c39}.error-message{color:#943a2e;font-size:12px;padding:9px 11px;background:#f8e3d9;border:1px solid #dfb2a1;border-radius:6px}.rules-strip{display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap;color:#6c624e;font-size:10px;margin-top:20px}.rules-strip span{color:var(--red);font-weight:900;font-size:15px}
+.game-screen{max-width:760px;margin:0 auto}.player-panel{display:flex;align-items:center;gap:10px;padding:11px 13px;border:1.5px solid #b9a985;border-radius:8px;background:#fbf3df;box-shadow:0 3px 0 rgba(83,66,38,.1)}.player-avatar{width:40px;height:40px;border:2px solid #4e493b;border-radius:11px 11px 8px 8px;display:grid;place-items:center;font-size:17px;font-weight:900;background:#e6c78e}.player-details{display:flex;flex-direction:column;line-height:1.5}.player-details strong{font-size:13px}.player-details small{font-size:10px;color:var(--muted)}.player-details small b{color:var(--red)}.key-status{margin-right:auto;display:flex;align-items:center;gap:6px;border:1px solid #c8b995;border-radius:7px;padding:6px 8px;background:#f5ead1}.key-status span{font-size:15px}.key-status small{font-size:9px;font-weight:700;color:#786b52}.key-status.has-key{background:#e4edda;border-color:#96b38b}.key-status.has-key small{color:#416e55}.game-toolbar{display:flex;align-items:center;justify-content:space-between;padding:18px 3px 11px}.game-toolbar>div{display:flex;flex-direction:column;line-height:1.5}.game-toolbar strong{font-size:17px}.quiet-btn{border:1px solid #b9a985;border-radius:20px;background:#f8efd9;padding:7px 13px;color:#514a3b;font:700 11px 'Vazirmatn',sans-serif}.rules-panel{padding:12px 14px;background:#f9efd8;border:1px dashed #b9a985;border-radius:7px;font-size:11px;line-height:1.8;margin-bottom:12px}.rules-panel p{margin:4px 0 0;color:#655d4d}.building-wrap{border:2px solid #514b3d;border-radius:8px;background:#e9d9b7;overflow:hidden;box-shadow:5px 6px 0 rgba(72,57,34,.15)}.building-top,.building-bottom{display:flex;justify-content:space-between;padding:7px 11px;background:#b38e62;color:#fff6e2;font-size:10px;font-weight:700}.building-top{border-bottom:2px solid #514b3d}.building-bottom{border-top:2px solid #514b3d;background:#827354}.building-bottom span{color:#f3d79d}.building{padding:5px 7px 8px;background:repeating-linear-gradient(0deg,#e8d7b2 0,#e8d7b2 28px,#dfcba2 29px,#dfcba2 31px)}.floor-row{min-height:76px;display:grid;grid-template-columns:66px 1fr;gap:7px;align-items:stretch;border-bottom:1px solid #b5a17b;position:relative;transition:background .15s}.floor-row:last-child{border-bottom:0}.floor-row.mine{background:#f8eccd;box-shadow:inset 4px 0 #b94f3b}.floor-row.above{opacity:.73}.floor-row.negative-floor{background:#d9d1b8}.floor-row.negative-floor.mine{background:#ece0c1}.floor-label{position:absolute;right:74px;top:5px;font-size:9px;font-weight:800;color:#84785e;z-index:1;pointer-events:none}.floor-number{position:absolute;right:7px;top:5px;font-size:10px;font-weight:900;color:#524b3b}.lift-cell{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;border-left:2px solid #988766;border-right:2px solid #988766;background:rgba(112,97,68,.12);padding:9px 3px 5px;min-height:75px}.lift-cell:before{content:'';position:absolute;top:0;bottom:0;left:50%;width:3px;background:#928467;transform:translateX(-50%);opacity:.55}.lift-door{z-index:1;width:32px;height:28px;border:2px solid #494436;border-radius:4px 4px 1px 1px;background:linear-gradient(90deg,#b7a37c 49%,#6f6248 50%,#b7a37c 52%);display:grid;place-items:center;font-size:10px;color:#2f2b22;font-weight:900;box-shadow:0 2px 0 #786a4e}.lift-door.current{background:linear-gradient(90deg,#d8b46d 49%,#5f4d34 50%,#d8b46d 52%);box-shadow:0 0 0 3px #b94f3b2e,0 2px 0 #786a4e}.move-btn{z-index:2;margin-top:4px;width:55px;padding:3px 1px;border:1px solid #8c7958;border-radius:4px;background:#f7edda;color:#4d4637;font:700 8px 'Vazirmatn',sans-serif;cursor:pointer;white-space:nowrap}.move-btn:disabled{opacity:.35;cursor:not-allowed;background:#ddd1b5}.room-area{padding:19px 4px 5px 2px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;align-items:center}.room{height:47px;min-width:0;position:relative;border:1.5px solid #796a4e;border-bottom:4px solid #796a4e;border-radius:4px 4px 1px 1px;background:#f5e9ca;display:flex;align-items:center;justify-content:center;overflow:hidden}.room:before{content:'';position:absolute;top:5px;left:50%;width:13px;height:16px;border:1.5px solid #9d8a65;background:#d9c49b;transform:translateX(-50%);border-radius:2px 2px 0 0}.room.empty:after{content:'⌂';position:absolute;bottom:-4px;right:3px;color:#a18e69;font-size:17px;opacity:.45}.room.occupied{background:#e8d1a5}.room.me{border-color:#a74e3b;background:#f3d8ba;box-shadow:0 0 0 2px #b94f3b35}.room-name{position:relative;z-index:1;margin-top:16px;max-width:100%;padding:1px 3px;border-radius:3px;background:#fbf3df;color:#352f25;font-size:8px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.room-figure{position:absolute;top:1px;width:12px;height:16px;z-index:1;border-radius:8px 8px 4px 4px;background:var(--avatar-color,#d39b64);border:1px solid #4f4637}.room-figure:before{content:'';position:absolute;top:-5px;left:2px;width:6px;height:6px;border-radius:50%;background:#e8c59b;border:1px solid #4f4637}.room.empty .room-figure{display:none}.negative-floor .room-figure,.negative-floor .room-name{transform:rotate(180deg)}.negative-floor .room{background:#d2c7a7;border-top:4px solid #796a4e;border-bottom:1.5px solid #796a4e}.negative-floor .room:before{top:auto;bottom:5px}.floor-special{position:absolute;left:5px;bottom:4px;font-size:8px;color:#7d573e;font-weight:800}.floor-row.key-floor .room-area{padding-bottom:13px}.key-button{position:absolute;left:4px;bottom:2px;z-index:3;border:1px solid #9a7740;background:#f3d48e;color:#5e4827;border-radius:10px;padding:2px 7px;font:800 8px 'Vazirmatn',sans-serif;cursor:pointer}.key-button:disabled{background:#dbe7d1;color:#486548;border-color:#8ba17d}.floor-row.locked-floor{opacity:.88}.floor-row.locked-floor .lift-door{filter:grayscale(.8);opacity:.7}.bottom-hint{margin-top:14px;padding:10px 12px;border:1px dashed #b7a47d;border-radius:7px;background:#f7edda;text-align:center;font-size:10px;color:#665c49;line-height:1.8}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);width:max-content;max-width:calc(100% - 30px);padding:10px 15px;border-radius:8px;background:#29291f;color:#fff7e8;box-shadow:0 5px 20px #3429193b;font-size:11px;line-height:1.6;opacity:0;pointer-events:none;transition:.22s;z-index:10;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.toast.error{background:#8e3e32}.rules-dialog{width:min(440px,calc(100% - 30px));border:2px solid #544b3b;border-radius:10px;background:#fbf2dd;color:var(--ink);padding:24px;box-shadow:0 15px 50px #2f241b55;font-family:inherit;line-height:1.9}.rules-dialog::backdrop{background:#28251e88}.rules-dialog h2{font-size:19px;margin:0 0 12px}.rules-dialog p{font-size:12px;color:#5f5748}.dialog-close{float:left;border:0;background:transparent;font-size:25px;line-height:1;cursor:pointer;color:#6c5b43}
+[hidden]{display:none!important}
+@media(min-width:650px){main{padding-top:32px}.floor-row{min-height:83px;grid-template-columns:76px 1fr}.lift-cell{min-height:82px}.room{height:53px}.room-name{font-size:9px}.floor-number{font-size:11px;right:9px}.floor-label{right:85px}.intro-card{min-height:300px}.intro-card h1{font-size:49px}.doodle-building{width:165px;height:184px}}
+@media(max-width:390px){main{padding-left:9px;padding-right:9px}.topbar{padding:0 11px}.intro-card{padding-right:19px}.intro-card h1{font-size:37px}.doodle-building{left:15px;width:119px;opacity:.8}.room-area{gap:3px;padding-left:2px}.room{height:43px}.room-name{font-size:7px}.floor-row{grid-template-columns:59px 1fr}.floor-label{right:65px}.move-btn{width:50px;font-size:7px}}
+
+/* HOTEL 96 — mobile game layout refinements */
+.server-status{display:inline-flex;align-items:center;margin-right:7px;padding-right:7px;border-right:1px solid #d3c5a5;font-size:9px;color:#8a7354;white-space:nowrap}
+.server-status.connected{color:#416e55}.server-status.disconnected{color:#a44838}
+.floor-row{grid-template-columns:minmax(0,1fr) 86px;direction:rtl;padding-top:0}
+.room-area{grid-column:1;grid-row:1;padding:19px 7px 5px 5px;min-width:0}
+.lift-cell{grid-column:2;grid-row:1;border-right:2px solid #988766;border-left:2px solid #988766}
+.floor-count{position:absolute;left:5px;top:5px;z-index:2;padding:1px 5px;border-radius:8px;background:#efe3c5;color:#786a4e;font-size:8px;font-weight:800}
+.lift-shaft{display:grid;place-items:center;width:100%;min-height:28px;position:relative}
+.lift-shaft:before{content:'';position:absolute;top:-8px;bottom:-8px;width:5px;background:#8f8262;opacity:.25}
+.lift-door{position:relative;z-index:1}
+.move-btn{font-size:9px;width:59px;min-height:25px}
+.room{box-shadow:inset 0 0 0 1px #fff4d4}
+.room-window{position:absolute;top:5px;left:50%;width:13px;height:15px;border:1.5px solid #9d8a65;background:#d9c49b;transform:translateX(-50%);border-radius:2px 2px 0 0}
+.room:before{display:none}
+.empty-room-label{position:relative;z-index:1;margin-top:17px;font-size:8px;color:#9b8b6b}
+.room.occupied .room-name{margin-top:16px}
+.floor-row.mine .floor-count{background:#f0d3b2;color:#8c4434}
+.floor-row.negative-floor .lift-cell{background:rgba(91,81,61,.18)}
+.floor-row.negative-floor .room-window{top:auto;bottom:5px}
+.floor-row.negative-floor .empty-room-label{transform:rotate(180deg);margin-top:-16px}
+.floor-row.negative-floor .room-name{margin-top:16px}
+.key-button{font-size:9px;padding:3px 8px}
+.move-btn:focus-visible,.key-button:focus-visible,.primary-btn:focus-visible,.quiet-btn:focus-visible{outline:3px solid #557b88;outline-offset:2px}
+@media(max-width:430px){
+  .online-pill{padding:5px 7px;gap:4px}.server-status{font-size:8px;margin-right:4px;padding-right:4px}
+  .floor-row{grid-template-columns:minmax(0,1fr) 75px;min-height:72px}
+  .lift-cell{min-height:71px;padding-left:2px;padding-right:2px}
+  .room-area{gap:3px;padding-right:4px;padding-left:4px}
+  .room{height:42px}
+  .room-name{font-size:7px;padding-left:2px;padding-right:2px}
+  .empty-room-label{font-size:7px}
+  .move-btn{width:53px;font-size:8px}
+  .floor-label{right:66px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* HOTEL 96 v2: shops, offline reservations, and two-way elevator */
+.shop-badge{position:absolute;right:7px;bottom:3px;z-index:2;max-width:calc(100% - 100px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:1px solid #b7a47d;border-radius:10px;background:#f8edcf;color:#665338;padding:2px 7px;font-size:8px;font-weight:900;box-shadow:0 1px 0 #8c795833}
+.room.reserved{background:#e3dcc8;border-style:dashed;filter:saturate(.65)}
+.room.reserved .room-figure{opacity:.55}
+.room-status{position:absolute;z-index:2;left:2px;top:2px;border-radius:5px;background:#e4eadb;color:#45634b;padding:0 3px;font-size:6px;font-weight:900}
+.room.reserved .room-status{background:#eee2c9;color:#8b6742}
+.floor-row.above{opacity:.42;filter:grayscale(.45)}
+.floor-row.mine .shop-badge{border-color:#b94f3b;background:#f3dfb9}
+@media(max-width:430px){.shop-badge{font-size:7px;max-width:calc(100% - 90px);right:5px;bottom:2px}.room-status{font-size:5px}.floor-row{min-height:78px}.room-area{padding-bottom:12px}}
+
+/* HOTEL 96 v2.1 — basement zombies and online co-op mini-games */
+.zombie-badge{position:absolute;left:6px;bottom:4px;z-index:3;padding:2px 6px;border:1px solid #8f493d;border-radius:10px;background:#f0d3c5;color:#873f33;font-size:8px;font-weight:900;box-shadow:0 1px 0 #6b302522;animation:zombiePulse 1.8s ease-in-out infinite}
+@keyframes zombiePulse{0%,100%{transform:translateX(0);box-shadow:0 1px 0 #6b302522}50%{transform:translateX(4px);box-shadow:0 0 7px #a94d3c55}}
+@media(prefers-reduced-motion:reduce){.zombie-badge{animation:none}}
+.floor-row.negative-floor .floor-special{left:6px;top:5px;bottom:auto;color:#665b42}
+.zombie-escape-btn{position:absolute;left:6px;bottom:23px;z-index:4;border:1px solid #8c493b;border-radius:10px;background:#8e4438;color:#fff7e8;padding:2px 7px;font:800 8px 'Vazirmatn',sans-serif;cursor:pointer;box-shadow:0 1px 0 #552c24}
+.house-panel,.house-room-panel{margin-top:16px;padding:14px;border:1.5px solid #ad9a72;border-radius:10px;background:rgba(251,244,227,.94);box-shadow:0 3px 0 rgba(83,66,38,.09)}
+.house-panel-heading,.house-room-head{display:flex;align-items:center;gap:10px}
+.house-panel-heading>span{width:40px;height:40px;display:grid;place-items:center;border:1px solid #c5b48e;border-radius:10px;background:#f3e5c3;font-size:22px}
+.house-panel-heading>div{display:flex;flex-direction:column;gap:2px}
+.house-panel-heading strong{font-size:14px}.house-panel-heading small{font-size:10px;color:#766b55}
+.house-invite-row{display:flex;gap:8px;margin-top:12px}
+.house-invite-row select{min-width:0;flex:1;border:1px solid #b9a985;border-radius:7px;padding:9px;background:#fff9e9;color:#3c3529;font:600 11px 'Vazirmatn',sans-serif}
+.house-invite-btn,.mini-game-action,.mini-game-again{border:1px solid #73583a;border-radius:7px;background:#516b55;color:#fff9e9;padding:8px 12px;font:800 11px 'Vazirmatn',sans-serif;cursor:pointer}
+.house-invite-btn:disabled{opacity:.4;cursor:not-allowed}
+.house-status{margin:9px 0 0;color:#6d624f;font-size:10px;line-height:1.8}
+.house-room-panel{border-color:#9e8b66;background:#f8edd4}
+.house-room-head{justify-content:space-between}
+.house-room-head>div{display:flex;flex-direction:column;gap:1px}
+.house-room-head small{font-size:9px;color:#8a7150;font-weight:800}
+.house-room-head h2{margin:0;font-size:17px}
+.leave-house-btn{border:1px solid #aa7060;border-radius:7px;background:#f4ded2;color:#7a3d32;padding:7px 10px;font:800 10px 'Vazirmatn',sans-serif;cursor:pointer}
+.house-players-line{margin:9px 0 12px;font-size:10px;color:#685b45;font-weight:800}
+.mini-game-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mini-game-card{min-height:85px;display:grid;grid-template-columns:34px 1fr;grid-template-rows:auto auto;align-items:center;column-gap:8px;text-align:right;border:1px solid #bdab82;border-radius:8px;background:#fff8e8;color:#3d3529;padding:9px;cursor:pointer;transition:transform .12s,border-color .12s,background .12s}
+.mini-game-card:active{transform:scale(.98)}
+.mini-game-card:hover{border-color:#967347;background:#fff3d5}
+.mini-game-card-icon{grid-row:1/3;width:34px;height:34px;display:grid;place-items:center;border:1px solid #d1bf95;border-radius:9px;background:#f4e4bf;font-size:21px}
+.mini-game-card strong{font-size:11px}.mini-game-card small{font-size:9px;color:#81745c;line-height:1.5}
+.mini-game-stage{margin-top:12px;padding:12px;border:1px dashed #ac9669;border-radius:9px;background:#fff8e9}
+.mini-game-stage-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mini-game-stage-head strong{font-size:14px}
+.mini-game-stage-head span{border-radius:20px;background:#4d6652;color:#fff;padding:4px 8px;font-size:9px;font-weight:900;white-space:nowrap}
+.mini-game-stage>p{margin:7px 0 10px;font-size:10px;color:#72654e}
+.mini-game-scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:11px}
+.mini-game-score{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 9px;border:1px solid #d4c49d;border-radius:7px;background:#f5e9ca;font-size:9px}
+.mini-game-score strong{font-size:14px;color:#426448}
+.mini-game-question{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:9px 0}
+.mini-game-question>strong{width:100%;font-size:12px;margin-bottom:3px}
+.puzzle-answer{flex:1;min-width:65px;border:1px solid #b6a078;border-radius:7px;background:#f4e7c9;color:#423a2c;padding:8px 5px;font:800 11px 'Vazirmatn',sans-serif;cursor:pointer}
+.mini-game-action,.mini-game-again{width:100%;min-height:42px;margin-top:3px;font-size:12px}
+.mini-game-again{background:#8c633b}
+.house-invite-modal{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:18px;background:rgba(39,34,25,.58)}
+.house-invite-modal[hidden]{display:none}
+.house-invite-card{width:min(360px,100%);padding:22px;border:2px solid #5a4e3c;border-radius:13px;background:#fbf2dd;text-align:center;box-shadow:0 15px 45px #1b160f66}
+.house-invite-icon{font-size:36px}.house-invite-card h2{margin:6px 0;font-size:18px}.house-invite-card p{font-size:11px;line-height:1.9;color:#6a5d47}
+.house-invite-actions{display:flex;gap:8px;margin-top:14px}
+.house-invite-actions button{flex:1;border:1px solid #716043;border-radius:7px;padding:10px 7px;font:800 11px 'Vazirmatn',sans-serif;cursor:pointer}
+#acceptHouseInvite{background:#516b55;color:#fff9e9}#declineHouseInvite{background:#f0dfca;color:#714438}
+@media(max-width:430px){
+  .house-panel,.house-room-panel{padding:11px}
+  .house-invite-row{flex-direction:column}
+  .house-invite-btn{min-height:39px}
+  .mini-game-card{min-height:79px;padding:7px;column-gap:6px}
+  .mini-game-card-icon{width:30px;height:30px;font-size:18px}
+  .mini-game-card strong{font-size:10px}
+  .mini-game-card small{font-size:8px}
+  .zombie-badge{font-size:7px;bottom:4px;left:4px}
+  .zombie-escape-btn{font-size:7px;bottom:22px;left:4px}
+}
+
+/* HOTEL 96 v2.2 survival, shops and inventory */
+.player-panel{flex-wrap:wrap}.survival-stats{display:flex;align-items:center;gap:9px;flex:1 1 100%;padding-top:7px;border-top:1px solid #d8c9a7;font-size:9px;font-weight:900}.survival-stats>div{display:flex;align-items:center;gap:4px;flex:1}.stat-track{height:8px;flex:1;min-width:35px;border-radius:10px;background:#dfd2b8;overflow:hidden;border:1px solid #b8a783}.stat-track i{display:block;height:100%;width:100%;background:#b94f3b;transition:width .25s}.stat-track.hunger i{background:#c28b37}.survival-tools{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:8px 0 12px;padding:9px;border:1px solid #c6b58e;border-radius:8px;background:#f8efd9}.survival-tools button,.survival-tools select{border:1px solid #a8946c;border-radius:7px;background:#fff7e4;color:#493e2e;padding:7px 9px;font:800 10px 'Vazirmatn',sans-serif}.survival-tools button:disabled{opacity:.45}.survival-tools span{font-size:9px;color:#78694e}.game-modal{position:fixed;inset:0;z-index:40;display:grid;place-items:center;padding:15px;background:#2d281f99}.game-modal[hidden]{display:none}.game-modal-card{position:relative;width:min(420px,100%);max-height:80vh;overflow:auto;padding:20px;border:2px solid #594d38;border-radius:12px;background:#fbf2dd;box-shadow:0 15px 45px #20190f66}.game-modal-card h2{margin:0 0 12px;font-size:18px}.modal-x{position:absolute;left:12px;top:9px;border:0;background:transparent;font-size:25px;color:#755b3d;cursor:pointer}.shop-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px;margin:7px 0;border:1px solid #d1c09a;border-radius:8px;background:#fff8e8;font-size:11px}.shop-item button{border:1px solid #6c805d;border-radius:6px;background:#54704f;color:white;padding:6px 12px;font:800 10px 'Vazirmatn',sans-serif}.shop-badge{cursor:pointer}.shop-badge:disabled{cursor:default;opacity:.8}.shop-badge:not(:disabled){background:#e4f0d9;border-color:#6b8a58;color:#38543a}
+@media(max-width:430px){.survival-stats{gap:5px;font-size:8px}.survival-tools{gap:5px}.survival-tools button,.survival-tools select{padding:7px 6px;font-size:9px}}
+
+
+/* HOTEL 96 v5: phone, floor chat, guards, shop jobs and admin tools */
+.resume-old-btn{min-height:42px;border:1px solid #88724e;border-radius:7px;background:#f1e3c2;color:#51442d;font:800 11px 'Vazirmatn',sans-serif;cursor:pointer}
+.role-chip{display:inline-block;width:max-content;margin-top:2px;padding:1px 7px;border-radius:12px;background:#e9e0c8;color:#62543c;font-weight:900}
+.role-chip.guard-role{background:#dce9df;color:#31583e}.role-chip.admin-role{background:#f2dfb0;color:#80551c}
+.survival-tools button#guardButton{background:#48634e;color:#fff}.survival-tools button#escapeButton{background:#8b4939;color:#fff}
+.chat-panel,.admin-panel{margin:9px 0 13px;padding:12px;border:1.5px solid #b9a985;border-radius:9px;background:#fbf3df;box-shadow:0 3px 0 rgba(83,66,38,.08)}
+.chat-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.chat-head>div{display:flex;flex-direction:column}.chat-head strong,.admin-panel>strong{font-size:12px}.chat-head small{font-size:9px;color:#776b55}.chat-head button{border:0;background:transparent;font-size:22px;color:#6e5538;cursor:pointer}
+.chat-messages{height:175px;overflow:auto;margin:10px 0;padding:8px;border:1px solid #d6c7a5;border-radius:7px;background:#fff9ec}.chat-empty{color:#85785f;text-align:center;font-size:10px;padding:35px 8px}.chat-message{padding:5px 7px;margin:4px 0;border-radius:7px;background:#f2e8d2}.chat-message small{display:block;color:#7a6a50;font-size:8px;font-weight:800}.chat-message p{margin:2px 0 0;font-size:11px;line-height:1.6;overflow-wrap:anywhere}
+.chat-form{display:flex;gap:7px}.chat-form input{flex:1;min-width:0;border:1px solid #b9a985;border-radius:7px;padding:8px;background:#fffdf6;font:11px 'Vazirmatn',sans-serif}.chat-form button,.admin-controls button,.shop-job-actions button,.phone-app-grid button{border:1px solid #6d805e;border-radius:7px;background:#54704f;color:#fff;padding:7px 11px;font:800 10px 'Vazirmatn',sans-serif;cursor:pointer}
+.admin-panel{border-color:#c9a45f;background:#fff2d3}.admin-controls{display:flex;gap:7px;margin-top:9px}.admin-controls select{flex:1;min-width:0;border:1px solid #c9b27e;border-radius:7px;background:white;padding:7px;font:10px 'Vazirmatn',sans-serif}.admin-controls button{background:#8a4937;border-color:#814331}.admin-controls button:disabled{opacity:.4}
+.shop-worker-status{margin:5px 0 9px;padding:8px;border-radius:7px;background:#f2e8d2;color:#61543e;font-size:10px;line-height:1.8}.shop-job-actions{display:flex;gap:7px;margin-bottom:8px}.shop-job-actions button{width:100%;min-height:38px}.phone-app-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.phone-app-grid button{min-height:48px;background:#496b78;border-color:#395865}.phone-contacts{min-height:45px;padding:8px;border:1px solid #d5c39b;border-radius:7px;background:#fff8e8;color:#6c604b;font-size:10px;line-height:1.8}
+@media(max-width:430px){.admin-controls,.chat-form{gap:5px}.admin-controls button,.chat-form button{padding-left:7px;padding-right:7px}.phone-app-grid{grid-template-columns:1fr 1fr}.chat-messages{height:155px}}
+
+/* V5.1 account security and name marketplace */
+.secondary-account-btn{min-height:42px;border:1px solid #a8946c;border-radius:7px;background:#fff7e4;color:#493e2e;font:800 12px 'Vazirmatn',sans-serif;cursor:pointer;padding:8px 12px}
+.secondary-account-btn:active{transform:translateY(1px)}
+#secureAccountButton{background:#e9f0d9;border-color:#789366;color:#38543a}
+#logoutButton{background:#f3e1d8;border-color:#b87963;color:#813e32}
+#nameMarketButton{background:#f5e7bf;border-color:#b28d45;color:#6c4d17}
+.name-offer-row{align-items:flex-start;flex-wrap:wrap}
+.name-offer-actions{display:flex;gap:6px;margin-right:auto}
+.name-offer-actions button{min-width:56px}
+.name-offer-actions button:first-child{background:#52734b}
+.name-offer-actions button:last-child{background:#9a5141}
+.recovery-code-display{display:block;direction:ltr;text-align:center;font:900 22px ui-monospace,monospace;letter-spacing:3px;padding:15px 9px;margin:12px 0;border:2px dashed #8e784c;border-radius:9px;background:#fff9e9;user-select:all}
+#recoveryFormArea{display:flex;flex-direction:column;gap:8px}
+#recoveryFormArea label{font-size:12px;font-weight:800;margin-top:3px}
+#recoveryFormArea input{height:43px;border:1px solid #b6a783;border-radius:7px;background:#fff9ea;padding:0 11px;font:inherit;width:100%}
+#recoveryFormArea button,#recoveryCodeResult button{width:100%;margin-top:10px}
+#nameMarketItems .shop-item>span,#nameOffersItems .shop-item>span{line-height:1.8}
+@media(max-width:430px){.secondary-account-btn{font-size:10px;padding:7px}.recovery-code-display{font-size:13px;letter-spacing:1px}}
+
+/* HOTEL 96 v5.2 — admin controls, park and 3D-style shared house */
+.admin-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.admin-actions button{flex:1 1 130px;min-height:38px;border:1px solid #927747;border-radius:7px;background:#f5e7bf;color:#57431c;padding:7px 9px;font:800 10px 'Vazirmatn',sans-serif;cursor:pointer}
+#adminFloor24Button{background:#dcebd5;border-color:#779568;color:#315b36}
+#adminFloor24Button.locked{background:#f1d9ce;border-color:#b27861;color:#773d31}
+.admin-floor-status{display:block;margin-top:7px;color:#756545;font-size:9px;line-height:1.7}
+#voiceToggleButton{background:#e4eef6;border-color:#7d9aaf;color:#31566d}
+#voiceToggleButton.voice-on{background:#d9ead8;border-color:#679365;color:#28552d}
+#parkButton{background:#dcebd6;border-color:#78966c;color:#365a32}
+.house-3d-wrap{margin:10px 0;border:1px solid #b69f76;border-radius:11px;overflow:hidden;background:linear-gradient(#d8e8ec,#a7bb92)}
+#house3dCanvas{display:block;width:100%;height:auto;max-height:340px;aspect-ratio:2.08;touch-action:pan-y}
+.house-cabinet-bar{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:8px 0 12px;padding:9px;border:1px solid #d1c09a;border-radius:9px;background:#fff8e8}
+.house-cabinet-bar strong{font-size:10px;margin-left:4px}
+.house-cabinet-bar button{border:1px solid #9b855c;border-radius:7px;background:#f1e4c5;color:#4b3d27;padding:7px 9px;font:800 10px 'Vazirmatn',sans-serif;cursor:pointer}
+.house-cabinet-bar .cabinet-remove{background:#ead8d0;border-color:#b47d6c;color:#713e31}
+.park-modal-card{position:relative;width:min(1000px,100%);max-height:94vh;overflow:auto;padding:16px;border:2px solid #4f6444;border-radius:15px;background:#edf0d9;box-shadow:0 20px 60px #151f1766}
+.park-modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;padding:2px 34px 10px 0}
+.park-modal-head small{font-size:9px;color:#607354;font-weight:900;letter-spacing:1px}
+.park-modal-head h2{margin:3px 0;font-size:19px;color:#2f4a30}
+.park-modal-head p{margin:0;color:#657258;font-size:10px;line-height:1.7}
+#parkCanvas{display:block;width:100%;height:auto;border:1px solid #81936f;border-radius:10px;background:#b5d3de;touch-action:none}
+.park-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto 0;flex-wrap:wrap}
+.park-controls>button,.park-controls div button{width:42px;height:36px;border:1px solid #6f805e;border-radius:7px;background:#54704f;color:#fff;font-size:15px;cursor:pointer}
+.park-controls div{display:flex;gap:5px}
+.park-controls small{font-size:9px;color:#647257}
+.bank-market-note{padding:9px;border:1px dashed #a38b5d;border-radius:8px;background:#f9edcf;color:#77613a;font-size:9px;line-height:1.8;margin:8px 0}
+.bank-trade-row{display:grid;grid-template-columns:minmax(0,1fr) 64px auto auto;align-items:center;gap:6px;padding:8px;margin:7px 0;border:1px solid #d1c09a;border-radius:8px;background:#fff8e8;font-size:10px}
+.bank-trade-row input{width:100%;min-width:0;border:1px solid #c8b58c;border-radius:6px;padding:6px;background:#fffdf4;font:10px 'Vazirmatn',sans-serif}
+.bank-trade-row button{border:1px solid #66835d;border-radius:6px;background:#54704f;color:#fff;padding:6px 8px;font:800 9px 'Vazirmatn',sans-serif;cursor:pointer}
+.bank-trade-row button.sell{background:#906448;border-color:#865a3d}
+.park-player-label{font:700 12px 'Vazirmatn',sans-serif}
+@media(max-width:560px){.park-modal-card{padding:10px}.park-modal-head h2{font-size:16px}.park-modal-head p{font-size:9px}.bank-trade-row{grid-template-columns:1fr 54px auto auto;gap:4px;padding:6px}.bank-trade-row button{padding:6px 5px}.house-cabinet-bar button{font-size:9px;padding:6px}.admin-actions button{font-size:9px}}
